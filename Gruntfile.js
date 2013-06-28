@@ -2,9 +2,9 @@ module.exports = function(grunt) {
     'use strict';
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        clean: ["build", "docs"],
+        clean: ['<%= pkg.buildDir %>', '<%= pkg.docsDir %>'],
         jshint: {
-            allFiles: ['grunt.js', 'src/**/*.js'],
+            allFiles: ['grunt.js', '<%= pkg.srcDir %>**/*.js'],
             options: {
                 jshintrc: '.jshintrc'
             }
@@ -17,7 +17,7 @@ module.exports = function(grunt) {
             },
             user: {
                 files: {
-                    'build/src/user.min.js': ['src/user.js']
+                    '<%= pkg.buildDir %><%= pkg.srcDir %>user.min.js': ['<%= pkg.srcDir %>user.js']
                 }
             }
         },
@@ -28,8 +28,8 @@ module.exports = function(grunt) {
                 version: '<%= pkg.version %>',
                 url: '<%= pkg.homepage %>',
                 options: { 
-                    paths: 'src/',
-                    outdir: 'docs/'
+                    paths: '<%= pkg.srcDir %>',
+                    outdir: '<%= pkg.docsDir %>'
                 }
             }
         }

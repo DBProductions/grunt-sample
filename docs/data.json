@@ -1,0 +1,81 @@
+{
+    "project": {
+        "name": "grunt-sample",
+        "description": "",
+        "version": "0.1.0",
+        "url": "http://github.com/DBProductions/grunt-sample"
+    },
+    "files": {
+        "src/user.js": {
+            "name": "src/user.js",
+            "modules": {},
+            "classes": {
+                "User": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "User": {
+            "name": "User",
+            "shortname": "User",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/user.js",
+            "line": 1,
+            "description": "Description for user class.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "name,",
+                    "description": "surname, age",
+                    "type": "Object"
+                }
+            ]
+        }
+    },
+    "classitems": [
+        {
+            "file": "src/user.js",
+            "line": 13,
+            "description": "get name of the user",
+            "itemtype": "method",
+            "name": "getName",
+            "return": {
+                "description": "name",
+                "type": "String"
+            },
+            "class": "User"
+        },
+        {
+            "file": "src/user.js",
+            "line": 21,
+            "description": "get full name of the user",
+            "itemtype": "method",
+            "name": "getFullName",
+            "return": {
+                "description": "name and surname",
+                "type": "String"
+            },
+            "class": "User"
+        },
+        {
+            "file": "src/user.js",
+            "line": 29,
+            "description": "get boolean if user is adult",
+            "itemtype": "method",
+            "name": "isAdult",
+            "return": {
+                "description": "age",
+                "type": "Integer"
+            },
+            "class": "User"
+        }
+    ],
+    "warnings": []
+}

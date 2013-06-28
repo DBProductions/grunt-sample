@@ -2,21 +2,11 @@ module.exports = function(grunt) {
     'use strict';
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        clean: ["build", "docs"],
         jshint: {
             allFiles: ['grunt.js', 'src/**/*.js'],
             options: {
-                curly: true,
-                eqeqeq: true,
-                eqnull: true,
-                browser: true,
-                node: true,
-                immed: false,
-                latedef: true,
-                newcap: true,
-                noarg: true,
-                sub: true,
-                undef: true,
-                boss: true              
+                jshintrc: '.jshintrc'
             }
         },
         uglify: {
@@ -30,11 +20,25 @@ module.exports = function(grunt) {
                     'build/src/user.min.js': ['src/user.js']
                 }
             }
+        },
+        yuidoc: {
+            compile: {
+                name: '<%= pkg.name %>',
+                description: '<%= pkg.description %>',
+                version: '<%= pkg.version %>',
+                url: '<%= pkg.homepage %>',
+                options: { 
+                    paths: 'src/',
+                    outdir: 'docs/'
+                }
+            }
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-yuidoc');
 
-    grunt.registerTask('default', ['jshint', 'uglify']);
+    grunt.registerTask('default', ['clean', 'jshint', 'uglify', 'yuidoc']);
 };

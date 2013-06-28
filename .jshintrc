@@ -10,5 +10,15 @@
     "noarg": true,
     "sub": true,
     "undef": true,
-    "boss": true              
+    "boss": true,
+    "globals" : {
+        "it" : false,
+        "xit" : false,
+        "describe" : false,
+        "xdescribe" : false,
+        "beforeEach" : false,
+        "afterEach" : false,
+        "expect" : false,
+        "spyOn" : false
+    }          
 }

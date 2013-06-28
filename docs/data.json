@@ -27,7 +27,7 @@
             "plugin_for": [],
             "extension_for": [],
             "file": "src/user.js",
-            "line": 1,
+            "line": 2,
             "description": "Description for user class.",
             "is_constructor": 1,
             "params": [
@@ -42,7 +42,7 @@
     "classitems": [
         {
             "file": "src/user.js",
-            "line": 13,
+            "line": 14,
             "description": "get name of the user",
             "itemtype": "method",
             "name": "getName",
@@ -54,7 +54,7 @@
         },
         {
             "file": "src/user.js",
-            "line": 21,
+            "line": 22,
             "description": "get full name of the user",
             "itemtype": "method",
             "name": "getFullName",
@@ -66,7 +66,7 @@
         },
         {
             "file": "src/user.js",
-            "line": 29,
+            "line": 30,
             "description": "get boolean if user is adult",
             "itemtype": "method",
             "name": "isAdult",

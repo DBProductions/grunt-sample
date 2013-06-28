@@ -9,6 +9,14 @@ module.exports = function(grunt) {
                 jshintrc: '.jshintrc'
             }
         },
+        jasmine: {
+            pivotal: {
+                src: '<%= pkg.srcDir %>**/*.js',
+                options: {
+                    specs: 'spec/**/*.js'
+                }
+            }
+        },
         uglify: {
             options: {
                 mangle: {toplevel: false}, //prevent changes to variable and function names
@@ -37,8 +45,9 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-yuidoc');
 
-    grunt.registerTask('default', ['clean', 'jshint', 'uglify', 'yuidoc']);
+    grunt.registerTask('default', ['clean', 'jshint', 'jasmine', 'uglify', 'yuidoc']);
 };

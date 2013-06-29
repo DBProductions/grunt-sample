@@ -8,7 +8,9 @@
     "files": {
         "src/user.js": {
             "name": "src/user.js",
-            "modules": {},
+            "modules": {
+                "User": 1
+            },
             "classes": {
                 "User": 1
             },
@@ -16,7 +18,21 @@
             "namespaces": {}
         }
     },
-    "modules": {},
+    "modules": {
+        "User": {
+            "name": "User",
+            "submodules": {},
+            "classes": {
+                "User": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/user.js",
+            "line": 6,
+            "description": "basic simple user module"
+        }
+    },
     "classes": {
         "User": {
             "name": "User",
@@ -26,8 +42,10 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
+            "module": "User",
+            "namespace": "",
             "file": "src/user.js",
-            "line": 2,
+            "line": 6,
             "description": "Description for user class.",
             "is_constructor": 1,
             "params": [
@@ -42,7 +60,37 @@
     "classitems": [
         {
             "file": "src/user.js",
-            "line": 14,
+            "line": 15,
+            "itemtype": "property",
+            "name": "name",
+            "type": "{String}",
+            "default": "\"\"",
+            "class": "User",
+            "module": "User"
+        },
+        {
+            "file": "src/user.js",
+            "line": 21,
+            "itemtype": "property",
+            "name": "surname",
+            "type": "{String}",
+            "default": "\"\"",
+            "class": "User",
+            "module": "User"
+        },
+        {
+            "file": "src/user.js",
+            "line": 27,
+            "itemtype": "property",
+            "name": "age",
+            "type": "{Integer}",
+            "default": "0",
+            "class": "User",
+            "module": "User"
+        },
+        {
+            "file": "src/user.js",
+            "line": 33,
             "description": "get name of the user",
             "itemtype": "method",
             "name": "getName",
@@ -50,11 +98,12 @@
                 "description": "name",
                 "type": "String"
             },
-            "class": "User"
+            "class": "User",
+            "module": "User"
         },
         {
             "file": "src/user.js",
-            "line": 22,
+            "line": 41,
             "description": "get full name of the user",
             "itemtype": "method",
             "name": "getFullName",
@@ -62,11 +111,12 @@
                 "description": "name and surname",
                 "type": "String"
             },
-            "class": "User"
+            "class": "User",
+            "module": "User"
         },
         {
             "file": "src/user.js",
-            "line": 30,
+            "line": 49,
             "description": "get boolean if user is adult",
             "itemtype": "method",
             "name": "isAdult",
@@ -74,7 +124,8 @@
                 "description": "age",
                 "type": "Integer"
             },
-            "class": "User"
+            "class": "User",
+            "module": "User"
         }
     ],
     "warnings": []

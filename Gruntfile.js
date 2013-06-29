@@ -4,7 +4,9 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         clean: ['<%= pkg.buildDir %>', '<%= pkg.docsDir %>'],
         jshint: {
-            allFiles: ['grunt.js', '<%= pkg.srcDir %>**/*.js'],
+            allFiles: ['grunt.js', 
+                       '<%= pkg.srcDir %>**/*.js',
+                       '<%= pkg.specDir %>**/*.js'],
             options: {
                 jshintrc: '.jshintrc'
             }
@@ -13,7 +15,7 @@ module.exports = function(grunt) {
             pivotal: {
                 src: '<%= pkg.srcDir %>**/*.js',
                 options: {
-                    specs: 'spec/**/*.js'
+                    specs: '<%= pkg.specDir %>/**/*.js'
                 }
             }
         },

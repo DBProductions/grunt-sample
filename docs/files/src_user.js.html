@@ -47,6 +47,8 @@
 
             <ul id="api-modules" class="apis modules">
             
+                <li><a href="../modules/User.html">User</a></li>
+            
             </ul>
         </div>
     </div>
@@ -86,6 +88,10 @@
 
 <div class="file">
     <pre class="code prettyprint linenums">
+/**
+ * basic simple user module
+ * @module User
+ */
 &quot;use strict&quot;;
 /**
  * Description for user class.
@@ -96,8 +102,23 @@
  */
 function User(params) {
     if (!params) { params = {}; }
+    /**
+     * @property name
+     * @type {String}
+     * @default &quot;&quot;
+     */
     var name = params.name || &#x27;&#x27;;
+    /**
+     * @property surname
+     * @type {String}
+     * @default &quot;&quot;
+     */
     var surname = params.surname || &#x27;&#x27;;
+    /**
+     * @property age
+     * @type {Integer}
+     * @default 0
+     */
     var age = params.age || 0;
     /**
      * get name of the user

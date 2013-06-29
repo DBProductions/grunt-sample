@@ -3,7 +3,15 @@ YUI.add("yuidoc-meta", function(Y) {
     "classes": [
         "User"
     ],
-    "modules": [],
-    "allModules": []
+    "modules": [
+        "User"
+    ],
+    "allModules": [
+        {
+            "displayName": "User",
+            "name": "User",
+            "description": "basic simple user module"
+        }
+    ]
 } };
 });

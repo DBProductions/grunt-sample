@@ -1,3 +1,7 @@
+/**
+ * basic simple user module
+ * @module User
+ */
 "use strict";
 /**
  * Description for user class.
@@ -8,8 +12,23 @@
  */
 function User(params) {
     if (!params) { params = {}; }
+    /**
+     * @property name
+     * @type {String}
+     * @default ""
+     */
     var name = params.name || '';
+    /**
+     * @property surname
+     * @type {String}
+     * @default ""
+     */
     var surname = params.surname || '';
+    /**
+     * @property age
+     * @type {Integer}
+     * @default 0
+     */
     var age = params.age || 0;
     /**
      * get name of the user

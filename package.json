@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "homepage": "http://github.com/DBProductions/grunt-sample",
     "srcDir": "src/",
+    "specDir": "spec/",
     "docsDir": "docs/",
     "buildDir": "build/",
     "devDependencies": {

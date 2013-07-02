@@ -25,10 +25,8 @@ module.exports = function(grunt) {
                 squeeze: {dead_code: false},
                 codegen: {quote_keys: true}
             },
-            user: {
-                files: {
-                    '<%= pkg.buildDir %><%= pkg.srcDir %>user.min.js': ['<%= pkg.srcDir %>user.js']
-                }
+            project: {
+                files: '<%= pkg.files %>'
             }
         },
         yuidoc: {

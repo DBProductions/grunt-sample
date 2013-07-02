@@ -6,6 +6,9 @@
     "specDir": "spec/",
     "docsDir": "docs/",
     "buildDir": "build/",
+    "files": {
+        "build/src/user.min.js": ["src/user.js"]
+    },
     "devDependencies": {
         "grunt": "~0.4.1",
         "grunt-contrib-clean": "~0.4.1",

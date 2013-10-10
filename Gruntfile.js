@@ -2,7 +2,10 @@ module.exports = function(grunt) {
     'use strict';
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        clean: ['<%= pkg.buildDir %>', '<%= pkg.docsDir %>'],
+        clean: ['<%= pkg.buildDir %>', 
+                '<%= pkg.docsDir %>', 
+                '<%= pkg.coverage %>',
+                '<%= pkg.reportsDir %>'],
         jshint: {
             allFiles: ['grunt.js', 
                        '<%= pkg.srcDir %>**/*.js',
@@ -18,18 +21,18 @@ module.exports = function(grunt) {
                     specs: '<%= pkg.specDir %>/**/*.js',
                     template: require('grunt-template-jasmine-istanbul'),
                     templateOptions: {
-                        coverage: 'coverage/coverage.json',
+                        coverage: '<%= pkg.coverage %>/coverage.json',
                         report: [
                             {
                                 type: 'html',
                                 options: {
-                                    dir: 'coverage/html'
+                                    dir: '<%= pkg.coverage %>/html'
                                 }
                             },
                             {
                                 type: 'cobertura',
                                 options: {
-                                    dir: 'coverage/cobertura'
+                                    dir: '<%= pkg.coverage %>/cobertura'
                                 }
                             },
                             {

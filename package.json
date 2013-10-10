@@ -5,6 +5,7 @@
   "srcDir": "src/",
   "specDir": "spec/",
   "reportsDir": "reports/",
+  "coverage": "coverage/",
   "docsDir": "docs/",
   "buildDir": "build/",
   "files": {

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="12"  lines-covered="12"  line-rate="1"  branches-valid="8"  branches-covered="5"  branch-rate="0.625"  timestamp="1381428221911" complexity="0" version="0.1">
+<coverage lines-valid="12"  lines-covered="12"  line-rate="1"  branches-valid="8"  branches-covered="5"  branch-rate="0.625"  timestamp="1381428781468" complexity="0" version="0.1">
 <sources>
 	<source>/home/intellibook/development/git/grunt-sample</source>
 </sources>

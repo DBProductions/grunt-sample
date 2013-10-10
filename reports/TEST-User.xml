@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
 
-  <testsuite name="User" errors="0" tests="4" failures="0" time="0.16" timestamp="2013-10-10T18:03:41.507Z">
+  <testsuite name="User" errors="0" tests="4" failures="0" time="0.057" timestamp="2013-10-10T18:13:01.101Z">
     
-      <testcase assertions="1" classname="User" name="user object has the right type" time="0.144">
+      <testcase assertions="1" classname="User" name="user object has the right type" time="0.039">
         
       </testcase>
     
-      <testcase assertions="1" classname="User" name="user object gives accepted name back" time="0.003">
+      <testcase assertions="1" classname="User" name="user object gives accepted name back" time="0.002">
         
       </testcase>
     
@@ -15,7 +15,7 @@
         
       </testcase>
     
-      <testcase assertions="1" classname="User" name="current user is not adult" time="0.001">
+      <testcase assertions="1" classname="User" name="current user is not adult" time="0.002">
         
       </testcase>
     

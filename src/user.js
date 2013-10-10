@@ -31,7 +31,7 @@ function User(params) {
      */
     var age = params.age || 0;
     /**
-     * get name of the user
+     * Get the name of the user
      * @method getName
      * @return {String} name
      */
@@ -39,7 +39,7 @@ function User(params) {
         return name;
     };
     /**
-     * get full name of the user
+     * Get the full name of the user
      * @method getFullName
      * @return {String} name and surname
      */
@@ -47,7 +47,7 @@ function User(params) {
         return name + ' ' + surname;
     };
     /**
-     * get boolean if user is adult
+     * Get boolean if user is adult
      * @method isAdult
      * @return {Integer} age
      */

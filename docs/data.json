@@ -91,7 +91,7 @@
         {
             "file": "src/user.js",
             "line": 33,
-            "description": "get name of the user",
+            "description": "Get the name of the user",
             "itemtype": "method",
             "name": "getName",
             "return": {
@@ -104,7 +104,7 @@
         {
             "file": "src/user.js",
             "line": 41,
-            "description": "get full name of the user",
+            "description": "Get the full name of the user",
             "itemtype": "method",
             "name": "getFullName",
             "return": {
@@ -117,7 +117,7 @@
         {
             "file": "src/user.js",
             "line": 49,
-            "description": "get boolean if user is adult",
+            "description": "Get boolean if user is adult",
             "itemtype": "method",
             "name": "isAdult",
             "return": {

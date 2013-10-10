@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+
+  <testsuite name="User" errors="0" tests="4" failures="0" time="0.067" timestamp="2013-10-10T17:39:46.960Z">
+    
+      <testcase assertions="1" classname="User" name="user object has the right type" time="0.044">
+        
+      </testcase>
+    
+      <testcase assertions="1" classname="User" name="user object gives accepted name back" time="0.003">
+        
+      </testcase>
+    
+      <testcase assertions="1" classname="User" name="user object gives accepted fullname back" time="0.002">
+        
+      </testcase>
+    
+      <testcase assertions="1" classname="User" name="current user is not adult" time="0.002">
+        
+      </testcase>
+    
+  </testsuite>
+
+</testsuites>

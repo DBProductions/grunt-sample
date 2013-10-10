@@ -15,7 +15,10 @@ module.exports = function(grunt) {
             pivotal: {
                 src: '<%= pkg.srcDir %>**/*.js',
                 options: {
-                    specs: '<%= pkg.specDir %>/**/*.js'
+                    specs: '<%= pkg.specDir %>/**/*.js',
+                    junit : {
+                        path: '<%= pkg.reportsDir %>'
+                    },
                 }
             }
         },

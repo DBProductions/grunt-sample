@@ -30,7 +30,6 @@ describe("Factory", function() {
 
     var user2 = factory.create(User, {name: 'User', surname: 'Test'}, [Payment]);
 
-
     it("user object has the right type", function() {
         expect(typeof user2).toBe('object'); 
     });

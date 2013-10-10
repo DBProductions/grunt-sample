@@ -145,7 +145,7 @@
         {
             "file": "src/Factory.js",
             "line": 12,
-            "description": "Get boolean if user is adult",
+            "description": "Create an object",
             "itemtype": "method",
             "name": "create",
             "params": [

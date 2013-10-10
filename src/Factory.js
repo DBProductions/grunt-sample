@@ -10,7 +10,7 @@
  */
 function Factory() {
     /**
-     * Get boolean if user is adult
+     * Create an object
      * @method create
      * @param {Object} Cls
      * @param {Object} params

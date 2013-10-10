@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
 
-  <testsuite name="User" errors="0" tests="4" failures="0" time="0.067" timestamp="2013-10-10T17:39:46.960Z">
+  <testsuite name="User" errors="0" tests="4" failures="0" time="0.16" timestamp="2013-10-10T18:03:41.507Z">
     
-      <testcase assertions="1" classname="User" name="user object has the right type" time="0.044">
+      <testcase assertions="1" classname="User" name="user object has the right type" time="0.144">
         
       </testcase>
     
@@ -15,7 +15,7 @@
         
       </testcase>
     
-      <testcase assertions="1" classname="User" name="current user is not adult" time="0.002">
+      <testcase assertions="1" classname="User" name="current user is not adult" time="0.001">
         
       </testcase>
     

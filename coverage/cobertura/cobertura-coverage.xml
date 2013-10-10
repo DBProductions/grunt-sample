@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage lines-valid="12"  lines-covered="12"  line-rate="1"  branches-valid="8"  branches-covered="5"  branch-rate="0.625"  timestamp="1381428221911" complexity="0" version="0.1">
+<sources>
+	<source>/home/intellibook/development/git/grunt-sample</source>
+</sources>
+<packages>
+	<package name="src"  line-rate="1"  branch-rate="0.625" >
+	<classes>
+		<class name="user.js"  filename="src/user.js"  line-rate="1"  branch-rate="0.625" >
+		<methods>
+			<method name="User"  hits="1"  signature="()V" >
+				<lines><line number="13"  hits="1" /></lines>
+			</method>
+			<method name="getName"  hits="1"  signature="()V" >
+				<lines><line number="38"  hits="1" /></lines>
+			</method>
+			<method name="getFullName"  hits="1"  signature="()V" >
+				<lines><line number="46"  hits="1" /></lines>
+			</method>
+			<method name="isAdult"  hits="1"  signature="()V" >
+				<lines><line number="54"  hits="1" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="5"  hits="1"  branch="false" />
+			<line number="13"  hits="1"  branch="false" />
+			<line number="14"  hits="1"  branch="true"  condition-coverage="50% (1/2)" />
+			<line number="20"  hits="1"  branch="true"  condition-coverage="50% (1/2)" />
+			<line number="26"  hits="1"  branch="true"  condition-coverage="50% (1/2)" />
+			<line number="32"  hits="1"  branch="true"  condition-coverage="100% (2/2)" />
+			<line number="38"  hits="1"  branch="false" />
+			<line number="39"  hits="1"  branch="false" />
+			<line number="46"  hits="1"  branch="false" />
+			<line number="47"  hits="1"  branch="false" />
+			<line number="54"  hits="1"  branch="false" />
+			<line number="55"  hits="1"  branch="false" />
+		</lines>
+		</class>
+	</classes>
+	</package>
+</packages>
+</coverage>

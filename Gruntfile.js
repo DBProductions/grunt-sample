@@ -16,6 +16,27 @@ module.exports = function(grunt) {
                 src: '<%= pkg.srcDir %>**/*.js',
                 options: {
                     specs: '<%= pkg.specDir %>/**/*.js',
+                    template: require('grunt-template-jasmine-istanbul'),
+                    templateOptions: {
+                        coverage: 'coverage/coverage.json',
+                        report: [
+                            {
+                                type: 'html',
+                                options: {
+                                    dir: 'coverage/html'
+                                }
+                            },
+                            {
+                                type: 'cobertura',
+                                options: {
+                                    dir: 'coverage/cobertura'
+                                }
+                            },
+                            {
+                                type: 'text-summary'
+                            }
+                        ]
+                    },
                     junit : {
                         path: '<%= pkg.reportsDir %>'
                     },

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+
+  <testsuite name="Payment" errors="0" tests="5" failures="0" time="0.019" timestamp="2013-10-10T19:25:39.223Z">
+    
+      <testcase assertions="1" classname="Payment" name="payment object has the right type" time="0.002">
+        
+      </testcase>
+    
+      <testcase assertions="1" classname="Payment" name="get right amount" time="0.001">
+        
+      </testcase>
+    
+      <testcase assertions="1" classname="Payment" name="set new amount" time="0.002">
+        
+      </testcase>
+    
+      <testcase assertions="1" classname="Payment" name="get right amount" time="0.003">
+        
+      </testcase>
+    
+      <testcase assertions="1" classname="Payment" name="set new amount" time="0.002">
+        
+      </testcase>
+    
+  </testsuite>
+
+</testsuites>

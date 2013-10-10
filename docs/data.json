@@ -6,6 +6,28 @@
         "url": "http://github.com/DBProductions/grunt-sample"
     },
     "files": {
+        "src/Factory.js": {
+            "name": "src/Factory.js",
+            "modules": {
+                "Factory": 1
+            },
+            "classes": {
+                "Factory": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/payment.js": {
+            "name": "src/payment.js",
+            "modules": {
+                "Payment": 1
+            },
+            "classes": {
+                "Payment": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "src/user.js": {
             "name": "src/user.js",
             "modules": {
@@ -19,6 +41,31 @@
         }
     },
     "modules": {
+        "Factory": {
+            "name": "Factory",
+            "submodules": {},
+            "classes": {
+                "Factory": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/Factory.js",
+            "line": 5
+        },
+        "Payment": {
+            "name": "Payment",
+            "submodules": {},
+            "classes": {
+                "Payment": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/payment.js",
+            "line": 6,
+            "description": "basic simple payment module"
+        },
         "User": {
             "name": "User",
             "submodules": {},
@@ -34,6 +81,43 @@
         }
     },
     "classes": {
+        "Factory": {
+            "name": "Factory",
+            "shortname": "Factory",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Factory",
+            "namespace": "",
+            "file": "src/Factory.js",
+            "line": 5,
+            "description": "Factory",
+            "is_constructor": 1
+        },
+        "Payment": {
+            "name": "Payment",
+            "shortname": "Payment",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Payment",
+            "namespace": "",
+            "file": "src/payment.js",
+            "line": 6,
+            "description": "Description for payment class.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "params",
+                    "description": "",
+                    "type": "Object"
+                }
+            ]
+        },
         "User": {
             "name": "User",
             "shortname": "User",
@@ -58,6 +142,75 @@
         }
     },
     "classitems": [
+        {
+            "file": "src/Factory.js",
+            "line": 12,
+            "description": "Get boolean if user is adult",
+            "itemtype": "method",
+            "name": "create",
+            "params": [
+                {
+                    "name": "Cls",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "params",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "clsList",
+                    "description": "",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "element",
+                "type": "Element"
+            },
+            "class": "Factory",
+            "module": "Factory"
+        },
+        {
+            "file": "src/payment.js",
+            "line": 15,
+            "itemtype": "property",
+            "name": "amount",
+            "type": "{Number}",
+            "default": "0",
+            "class": "Payment",
+            "module": "Payment"
+        },
+        {
+            "file": "src/payment.js",
+            "line": 21,
+            "description": "Get the amount",
+            "itemtype": "method",
+            "name": "getAmount",
+            "return": {
+                "description": "amount",
+                "type": "Number"
+            },
+            "class": "Payment",
+            "module": "Payment"
+        },
+        {
+            "file": "src/payment.js",
+            "line": 29,
+            "description": "Set the amount",
+            "itemtype": "method",
+            "name": "getName",
+            "params": [
+                {
+                    "name": "param",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "class": "Payment",
+            "module": "Payment"
+        },
         {
             "file": "src/user.js",
             "line": 15,

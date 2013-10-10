@@ -20,6 +20,8 @@
         "afterEach" : false,
         "expect" : false,
         "spyOn" : false,
-        "User" : false
+        "User" : false,
+        "Factory" : false,
+        "Payment" : false
     }          
 }

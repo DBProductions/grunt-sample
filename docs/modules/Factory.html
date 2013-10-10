@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>src/user.js - grunt-sample</title>
+    <title>Factory - grunt-sample</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -92,68 +92,49 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1 class="file-heading">File: src/user.js</h1>
+                        <h1>Factory Module</h1>
+<div class="box clearfix meta">
+    
 
-<div class="file">
-    <pre class="code prettyprint linenums">
-/**
- * basic simple user module
- * @module User
- */
-&quot;use strict&quot;;
-/**
- * Description for user class.
- *
- * @class User
- * @constructor
- * @param {Object} name, surname, age
- */
-function User(params) {
-    if (!params) { params = {}; }
-    /**
-     * @property name
-     * @type {String}
-     * @default &quot;&quot;
-     */
-    var name = params.name || &#x27;&#x27;;
-    /**
-     * @property surname
-     * @type {String}
-     * @default &quot;&quot;
-     */
-    var surname = params.surname || &#x27;&#x27;;
-    /**
-     * @property age
-     * @type {Integer}
-     * @default 0
-     */
-    var age = params.age || 0;
-    /**
-     * Get the name of the user
-     * @method getName
-     * @return {String} name
-     */
-    this.getName = function getName() {
-        return name;
-    };
-    /**
-     * Get the full name of the user
-     * @method getFullName
-     * @return {String} name and surname
-     */
-    this.getFullName = function getFullName() {
-        return name + &#x27; &#x27; + surname;
-    };
-    /**
-     * Get boolean if user is adult
-     * @method isAdult
-     * @return {Integer} age
-     */
-    this.isAdult = function isAdult() {
-        return age &gt;= 18;
-    };
-}
-    </pre>
+    
+
+    
+        <div class="foundat">
+            Defined in: <a href="../files/src_Factory.js.html#l5"><code>src&#x2F;Factory.js:5</code></a>
+        </div>
+    
+
+    
+</div>
+
+
+
+<div class="box intro">
+    
+</div>
+
+
+
+<div class="yui3-g">
+    <div class="yui3-u-1-2">
+        
+            <p>This module provides the following classes:</p>
+
+            <ul class="module-classes">
+            
+                <li class="module-class">
+                    <a href="../classes/Factory.html">
+                        Factory
+                    </a>
+                </li>
+            
+            </ul>
+        
+    </div>
+
+    <div class="yui3-u-1-2">
+        
+    </div>
 </div>
 
                     </div>

@@ -82,10 +82,14 @@ module.exports = function(grunt) {
             }
         },
         compress: {
-            options: {
-                archive: '<%= pkg.releaseDir %>grunt_sample_<%= pkg.version %>.tgz'
-            },
-            files: []
+            main: {
+                options: {
+                    archive: '<%= pkg.releaseDir %>grunt_sample_<%= pkg.version %>.tgz'
+                },
+                files: [
+                    {src: ['**/*.js'], cwd: '<%= pkg.releaseDir %>', expand: true}
+                ]
+            }
         }
     });
 

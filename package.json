@@ -1,15 +1,15 @@
 {
   "name": "grunt-sample",
-  "version": "0.1.1",
+  "version": "0.1.23",
   "homepage": "http://github.com/DBProductions/grunt-sample",
   "srcDir": "src/",
   "specDir": "spec/",
   "reportsDir": "reports/",
   "coverage": "coverage/",
   "docsDir": "docs/",
-  "buildDir": "build/",
+  "releaseDir": "release/",
   "files": {
-    "build/js/user.min.js": [
+    "release/user.min.js": [
       "src/user.js"
     ]
   },

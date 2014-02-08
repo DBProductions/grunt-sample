@@ -2,7 +2,7 @@ module.exports = function(grunt) {
     'use strict';
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        clean: ['<%= pkg.buildDir %>', 
+        clean: ['<%= pkg.releaseDir %>',
                 '<%= pkg.docsDir %>', 
                 '<%= pkg.coverage %>',
                 '<%= pkg.reportsDir %>'],
@@ -56,6 +56,19 @@ module.exports = function(grunt) {
                 files: '<%= pkg.files %>'
             }
         },
+        release: {
+            options: {
+                bump: true,
+                file: 'package.json',
+                add: false,
+                commit: false,
+                tag: false,
+                push: false,
+                pushTags: false,
+                npm: false,
+                npmtag: false
+            }
+        },
         yuidoc: {
             compile: {
                 name: '<%= pkg.name %>',
@@ -67,6 +80,12 @@ module.exports = function(grunt) {
                     outdir: '<%= pkg.docsDir %>'
                 }
             }
+        },
+        compress: {
+            options: {
+                archive: '<%= pkg.releaseDir %>grunt_sample_<%= pkg.version %>.tgz'
+            },
+            files: []
         }
     });
 
@@ -74,7 +93,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-release');
     grunt.loadNpmTasks('grunt-contrib-yuidoc');
+    grunt.loadNpmTasks('grunt-contrib-compress');
 
-    grunt.registerTask('default', ['clean', 'jshint', 'jasmine', 'uglify', 'yuidoc']);
+    grunt.registerTask('default', ['clean', 'jshint', 'jasmine', 'uglify', 'release', 'yuidoc', 'compress']);
 };

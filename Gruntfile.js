@@ -2,10 +2,16 @@ module.exports = function(grunt) {
     'use strict';
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        /**
+         * clean directories
+         */
         clean: ['<%= pkg.releaseDir %>',
                 '<%= pkg.docsDir %>', 
                 '<%= pkg.coverage %>',
                 '<%= pkg.reportsDir %>'],
+        /**
+         * check code quality
+         */
         jshint: {
             allFiles: ['grunt.js', 
                        '<%= pkg.srcDir %>**/*.js',
@@ -14,6 +20,9 @@ module.exports = function(grunt) {
                 jshintrc: '.jshintrc'
             }
         },
+        /**
+         * run jasmine tests
+         */
         jasmine: {
             pivotal: {
                 src: '<%= pkg.srcDir %>**/*.js',
@@ -46,6 +55,9 @@ module.exports = function(grunt) {
                 }
             }
         },
+        /**
+         * minifying files
+         */
         uglify: {
             options: {
                 mangle: {toplevel: false}, //prevent changes to variable and function names
@@ -56,6 +68,9 @@ module.exports = function(grunt) {
                 files: '<%= pkg.files %>'
             }
         },
+        /**
+         * build release
+         */
         release: {
             options: {
                 bump: true,
@@ -69,6 +84,9 @@ module.exports = function(grunt) {
                 npmtag: false
             }
         },
+        /**
+         * create api documentation
+         */
         yuidoc: {
             compile: {
                 name: '<%= pkg.name %>',
@@ -81,6 +99,9 @@ module.exports = function(grunt) {
                 }
             }
         },
+        /**
+         * create a archive
+         */
         compress: {
             main: {
                 options: {
@@ -102,4 +123,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compress');
 
     grunt.registerTask('default', ['clean', 'jshint', 'jasmine', 'uglify', 'release', 'yuidoc', 'compress']);
+
+    grunt.registerTask('travis', ['clean', 'jshint', 'jasmine', 'uglify']);
 };

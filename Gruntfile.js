@@ -124,5 +124,5 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', ['clean', 'jshint', 'jasmine', 'uglify', 'release', 'yuidoc', 'compress']);
 
-    grunt.registerTask('travis', ['clean', 'jshint', 'jasmine', 'uglify']);
+    grunt.registerTask('travis', ['clean', 'jshint']);
 };

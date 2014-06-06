@@ -1,7 +1,8 @@
 {
   "name": "grunt-sample",
   "version": "0.1.35",
-  "homepage": "http://github.com/DBProductions/grunt-sample",
+  "description": "Grunt sample",
+  "repository": "git@github.com:DBProductions/grunt-sample.git",
   "srcDir": "src/",
   "specDir": "spec/",
   "reportsDir": "reports/",

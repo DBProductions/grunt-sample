@@ -1,6 +1,6 @@
 {
   "name": "grunt-sample",
-  "version": "0.1.33",
+  "version": "0.1.35",
   "homepage": "http://github.com/DBProductions/grunt-sample",
   "srcDir": "src/",
   "specDir": "spec/",
@@ -14,7 +14,7 @@
     ]
   },
   "scripts": {
-    "test": "grunt travis --verbose"
+    "test": "grunt --verbose"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

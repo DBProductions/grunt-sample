@@ -17,3 +17,9 @@ Installing the command line interface.
 1. Download or clone repository  
 2. inside of the directory run `npm install` to install the dependencies  
 3. run `grunt`  
+
+## Travis CI
+
+The continuous integration service is monitoring this repository: [Link](https://travis-ci.org/DBProductions/grunt-sample)
+
+![Build Status](https://travis-ci.org/DBProductions/grunt-sample.svg?branch=master)

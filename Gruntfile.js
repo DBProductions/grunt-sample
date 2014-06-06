@@ -123,6 +123,4 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compress');
 
     grunt.registerTask('default', ['clean', 'jshint', 'jasmine', 'uglify', 'release', 'yuidoc', 'compress']);
-
-    grunt.registerTask('travis', ['clean', 'jshint']);
 };

@@ -19,8 +19,8 @@ function Factory() {
      */
     this.create = function create(Cls, params, clsList) {
         var element = new Cls(params);
-        if(clsList && clsList.length) {
-            for(var i = 0; i < clsList.length; i++) {
+        if (clsList && clsList.length) {
+            for (var i = 0; i < clsList.length; i += 1) {
                 var obj = new clsList[i](params);
                 for (var j in obj) {
                     element[obj[j].name] = obj[j];

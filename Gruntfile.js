@@ -21,6 +21,12 @@ module.exports = function(grunt) {
             }
         },
         /**
+         * run code style linter
+         */
+        jscs: {
+            src: "<%= pkg.srcDir %>**/*.js"
+        },
+        /**
          * run jasmine tests
          */
         jasmine: {
@@ -116,11 +122,12 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-jscs-checker');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-release');
     grunt.loadNpmTasks('grunt-contrib-yuidoc');
     grunt.loadNpmTasks('grunt-contrib-compress');
 
-    grunt.registerTask('default', ['clean', 'jshint', 'jasmine', 'uglify', 'release', 'yuidoc', 'compress']);
+    grunt.registerTask('default', ['clean', 'jshint', 'jscs', 'jasmine', 'uglify', 'release', 'yuidoc', 'compress']);
 };

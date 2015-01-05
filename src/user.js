@@ -17,19 +17,19 @@ function User(params) {
      * @type {String}
      * @default ""
      */
-    var name = params.name || '';
+    var name = params.name || '',
     /**
      * @property surname
      * @type {String}
      * @default ""
      */
-    var surname = params.surname || '';
+    surname = params.surname || '',
     /**
      * @property age
      * @type {Integer}
      * @default 0
      */
-    var age = params.age || 0;
+    age = params.age || 0;
     /**
      * Get the name of the user
      * @method getName

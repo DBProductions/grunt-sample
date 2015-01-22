@@ -117,6 +117,14 @@ module.exports = function(grunt) {
                     {src: ['**/*.js'], cwd: '<%= pkg.releaseDir %>', expand: true}
                 ]
             }
+        },
+        /**
+         * git hook
+         */
+        githooks: {
+            all: {
+                'pre-commit': 'test'
+            }
         }
     });
 
@@ -128,6 +136,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-release');
     grunt.loadNpmTasks('grunt-contrib-yuidoc');
     grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.loadNpmTasks('grunt-githooks');
 
+    grunt.registerTask('test', ['jshint', 'jscs']); 
     grunt.registerTask('default', ['clean', 'jshint', 'jscs', 'jasmine', 'uglify', 'release', 'yuidoc', 'compress']);
 };

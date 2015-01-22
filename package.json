@@ -1,6 +1,6 @@
 {
   "name": "grunt-sample",
-  "version": "0.1.37",
+  "version": "0.1.41",
   "description": "Grunt sample",
   "repository": "git@github.com:DBProductions/grunt-sample.git",
   "srcDir": "src/",
@@ -20,15 +20,14 @@
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-clean": "~0.4.1",
-    "grunt-contrib-jshint": "~0.6.0",
-    "grunt-contrib-jasmine": "~0.5.1",
-    "grunt-template-jasmine-istanbul": "~0.2.5",
-    "grunt-contrib-uglify": "~0.2.2",
-    "grunt-release": "~0.6.0",
     "grunt-contrib-compress": "~0.5.3",
-    "grunt-contrib-yuidoc": "~0.4.0"
-  },
-  "dependencies": {
-    "grunt-jscs-checker": "^0.8.1"
+    "grunt-contrib-jasmine": "~0.5.1",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-yuidoc": "~0.4.0",
+    "grunt-jscs-checker": "^0.8.1",
+    "grunt-githooks": "^0.3.1",
+    "grunt-release": "~0.6.0",
+    "grunt-template-jasmine-istanbul": "~0.2.5"
   }
 }

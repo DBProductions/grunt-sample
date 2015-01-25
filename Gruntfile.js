@@ -17,7 +17,9 @@ module.exports = function(grunt) {
                        '<%= pkg.srcDir %>**/*.js',
                        '<%= pkg.specDir %>**/*.js'],
             options: {
-                jshintrc: '.jshintrc'
+                jshintrc: '.jshintrc',
+                reporter: 'checkstyle',
+                reporterOutput: '<%= pkg.coverage %>/checkstyle-result.xml'
             }
         },
         /**

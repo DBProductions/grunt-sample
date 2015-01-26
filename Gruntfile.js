@@ -19,7 +19,7 @@ module.exports = function(grunt) {
             options: {
                 jshintrc: '.jshintrc',
                 reporter: 'checkstyle',
-                reporterOutput: '<%= pkg.coverage %>/checkstyle-result.xml'
+                reporterOutput: '<%= pkg.coverage %>checkstyle-result.xml'
             }
         },
         /**
@@ -38,18 +38,18 @@ module.exports = function(grunt) {
                     specs: '<%= pkg.specDir %>/**/*.js',
                     template: require('grunt-template-jasmine-istanbul'),
                     templateOptions: {
-                        coverage: '<%= pkg.coverage %>/coverage.json',
+                        coverage: '<%= pkg.coverage %>coverage.json',
                         report: [
                             {
                                 type: 'html',
                                 options: {
-                                    dir: '<%= pkg.coverage %>/html'
+                                    dir: '<%= pkg.coverage %>html'
                                 }
                             },
                             {
                                 type: 'cobertura',
                                 options: {
-                                    dir: '<%= pkg.coverage %>/cobertura'
+                                    dir: '<%= pkg.coverage %>cobertura'
                                 }
                             },
                             {
@@ -140,6 +140,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-githooks');
 
-    grunt.registerTask('test', ['jshint', 'jscs']); 
+    grunt.registerTask('test', ['jshint', 'jscs']);
     grunt.registerTask('default', ['clean', 'jshint', 'jscs', 'jasmine', 'uglify', 'release', 'yuidoc', 'compress']);
 };

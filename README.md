@@ -2,7 +2,7 @@ grunt-sample
 ============
 
 Example or skeleton for using Grunt.  
-Pre default Grunt runs the following tasks:  
+As default Grunt runs the following tasks:  
 clean, jshint, jscs, jasmine, uglify, release, yuidoc, compress
 
 Adjust package.json to your needs and edit Gruntfile.js when needed.
@@ -21,7 +21,7 @@ Installing the command line interface.
 ## git Hook
 
 The example use grunt-githooks and have a test task defined which runs jshint, jscs.  
-To activate the hook run `grunt githooks`, then a commit will run the test task before.
+To activate the hook run `grunt githooks`, then every commit will run the test task before.
 
 ## Travis CI
 
@@ -29,5 +29,23 @@ The continuous integration service is monitoring this repository: [Link](https:/
 
 ![Build Status](https://travis-ci.org/DBProductions/grunt-sample.svg?branch=master)
 
+## Jenkins
+
+To use the example as Jenkins job, you can simple use a shell execution when dependencies are installed.
+
+```bash
+#!/bin/bash
+
+export PATH=/usr/local/bin:$PATH;
+
+git clone https://github.com/DBProductions/grunt-sample.git .
+npm install
+grunt --verbose
+```
+
+To diplay the results, the following Plugins are useful.
+* Checkstyle Plug-in
+* Cobertura Plugin
+
 ## Feedback
-Star this repo if you found it useful. Use the github issue tracker to give feedback on this repo.
+Star this repo if you found it useful. Use the github issue tracker to give feedback on this repo.  

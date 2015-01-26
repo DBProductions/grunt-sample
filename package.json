@@ -1,6 +1,6 @@
 {
   "name": "grunt-sample",
-  "version": "0.1.42",
+  "version": "0.1.44",
   "description": "Grunt sample",
   "repository": "git@github.com:DBProductions/grunt-sample.git",
   "srcDir": "src/",
@@ -10,9 +10,9 @@
   "docsDir": "docs/",
   "releaseDir": "release/",
   "files": {
-    "release/js/user.min.js": [
-      "src/user.js"
-    ]
+    "release/js/user.min.js": ["src/user.js"],
+    "release/js/payment.min.js": ["src/payment.js"],
+    "release/js/Factory.min.js": ["src/Factory.js"]
   },
   "scripts": {
     "test": "grunt --verbose"

@@ -31,7 +31,7 @@ The continuous integration service is monitoring this repository: [Link](https:/
 
 ## Jenkins
 
-Using the example as Jenkins job, you can simple run a shell execution when dependencies are installed.
+Using the example as Jenkins job, simple run a shell execution when dependencies are installed.
 
 ```bash
 #!/bin/bash

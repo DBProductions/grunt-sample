@@ -31,7 +31,7 @@ The continuous integration service is monitoring this repository: [Link](https:/
 
 ## Jenkins
 
-To use the example as Jenkins job, you can simple use a shell execution when dependencies are installed.
+Using the example as Jenkins job, you can simple run a shell execution when dependencies are installed.
 
 ```bash
 #!/bin/bash
@@ -43,7 +43,7 @@ npm install
 grunt --verbose
 ```
 
-To diplay the results, the following Plugins are useful.
+For diplaying the results, following Plugins are useful.
 * Checkstyle Plug-in
 * Cobertura Plugin
 

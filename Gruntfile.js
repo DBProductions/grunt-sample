@@ -10,6 +10,17 @@ module.exports = function(grunt) {
                 '<%= pkg.coverage %>',
                 '<%= pkg.reportsDir %>'],
         /**
+         * check style quality
+         */
+        csslint: {
+            strict: {
+                options: {
+                    import: 2
+                },
+                src: ['<%= pkg.cssDir %>**/*.css']
+            }
+        },
+        /**
          * check code quality
          */
         jshint: {
@@ -131,6 +142,7 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-jscs-checker');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
@@ -140,6 +152,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-githooks');
 
-    grunt.registerTask('test', ['jshint', 'jscs']);
-    grunt.registerTask('default', ['clean', 'jshint', 'jscs', 'jasmine', 'uglify', 'release', 'yuidoc', 'compress']);
+    grunt.registerTask('test', ['csslint', 'jshint', 'jscs']);
+    grunt.registerTask('default', ['clean', 'csslint', 'jshint', 'jscs', 'jasmine', 'uglify', 'release', 'yuidoc', 'compress']);
 };

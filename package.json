@@ -1,18 +1,25 @@
 {
   "name": "grunt-sample",
-  "version": "0.1.44",
+  "version": "0.1.51",
   "description": "Grunt sample",
   "repository": "git@github.com:DBProductions/grunt-sample.git",
-  "srcDir": "src/",
+  "srcDir": "js/",
+  "cssDir": "css/",
   "specDir": "spec/",
   "reportsDir": "reports/",
   "coverage": "coverage/",
   "docsDir": "docs/",
   "releaseDir": "release/",
   "files": {
-    "release/js/user.min.js": ["src/user.js"],
-    "release/js/payment.min.js": ["src/payment.js"],
-    "release/js/Factory.min.js": ["src/Factory.js"]
+    "release/js/user.min.js": [
+      "js/user.js"
+    ],
+    "release/js/payment.min.js": [
+      "js/payment.js"
+    ],
+    "release/js/Factory.min.js": [
+      "js/Factory.js"
+    ]
   },
   "scripts": {
     "test": "grunt --verbose"
@@ -21,12 +28,13 @@
     "grunt": "~0.4.1",
     "grunt-contrib-clean": "~0.4.1",
     "grunt-contrib-compress": "~0.5.3",
+    "grunt-contrib-csslint": "^0.4.0",
     "grunt-contrib-jasmine": "~0.5.1",
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-yuidoc": "~0.4.0",
-    "grunt-jscs-checker": "^0.8.1",
     "grunt-githooks": "^0.3.1",
+    "grunt-jscs-checker": "^0.8.1",
     "grunt-release": "~0.6.0",
     "grunt-template-jasmine-istanbul": "~0.2.5"
   }

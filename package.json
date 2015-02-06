@@ -1,6 +1,6 @@
 {
   "name": "grunt-sample",
-  "version": "0.1.51",
+  "version": "0.1.53",
   "description": "Grunt sample",
   "repository": "git@github.com:DBProductions/grunt-sample.git",
   "srcDir": "js/",

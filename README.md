@@ -3,7 +3,7 @@ grunt-sample
 
 Example or skeleton for using Grunt.  
 As default Grunt runs the following tasks:  
-clean, jshint, jscs, jasmine, uglify, release, yuidoc, compress
+clean, csslint, jshint, jscs, jasmine, uglify, release, yuidoc, compress
 
 Adjust package.json to your needs and edit Gruntfile.js when needed.
 

@@ -2,7 +2,7 @@
  * basic simple payment module
  * @module Payment
  */
-"use strict";
+'use strict';
 /**
  * Description for payment class.
  *
@@ -10,7 +10,7 @@
  * @constructor
  * @param {Object} params
  */
-function Payment(params) {
+function Payment (params) {
     params = params || {};
     /**
      * @property amount
@@ -23,7 +23,7 @@ function Payment(params) {
      * @method getAmount
      * @return {Number} amount
      */
-    this.getAmount = function getAmount() {
+    this.getAmount = function getAmount () {
         return amount;
     };
     /**
@@ -31,7 +31,7 @@ function Payment(params) {
      * @method getName
      * @param {Number} param
      */
-    this.setAmount = function setAmount(param) {
+    this.setAmount = function setAmount (param) {
         amount = param;
-    };    
+    };
 }

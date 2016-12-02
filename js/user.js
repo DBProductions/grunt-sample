@@ -2,7 +2,7 @@
  * basic simple user module
  * @module User
  */
-"use strict";
+'use strict';
 /**
  * Description for user class.
  *
@@ -10,7 +10,7 @@
  * @constructor
  * @param {Object} name, surname, age
  */
-function User(params) {
+function User (params) {
     if (!params) { params = {}; }
     /**
      * @property name
@@ -23,19 +23,19 @@ function User(params) {
      * @type {String}
      * @default ""
      */
-    surname = params.surname || '',
+        surname = params.surname || '',
     /**
      * @property age
      * @type {Integer}
      * @default 0
      */
-    age = params.age || 0;
+        age = params.age || 0;
     /**
      * Get the name of the user
      * @method getName
      * @return {String} name
      */
-    this.getName = function getName() {
+    this.getName = function getName () {
         return name;
     };
     /**
@@ -43,7 +43,7 @@ function User(params) {
      * @method getFullName
      * @return {String} name and surname
      */
-    this.getFullName = function getFullName() {
+    this.getFullName = function getFullName () {
         return name + ' ' + surname;
     };
     /**
@@ -51,7 +51,7 @@ function User(params) {
      * @method isAdult
      * @return {Integer} age
      */
-    this.isAdult = function isAdult() {
+    this.isAdult = function isAdult () {
         return age >= 18;
     };
 }

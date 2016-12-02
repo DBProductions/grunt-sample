@@ -1,0 +1,30 @@
+{
+    "extends": ["standard"],
+    "ecmaFeatures": {
+        "arrowFunctions": true,
+        "blockBindings": true,
+        "forOf": true,
+        "generators": true,
+        "modules": true
+    },
+    "globals": {
+        "console": true,
+        "require": true,
+        "module": true,
+        "describe": true,
+        "beforeEach": true,
+        "it": true,
+        "expect": true,
+        "done": true
+    },
+    "parser": "esprima",
+    "rules": {
+        "semi": [2, "always"],
+        "curly": 2,
+        "quotes": [2, "single"],
+        "indent": [2, 4],
+        "no-multiple-empty-lines": 0
+    },
+    "plugins": [
+    ]
+}

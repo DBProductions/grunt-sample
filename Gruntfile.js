@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
     'use strict';
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -6,38 +6,19 @@ module.exports = function(grunt) {
          * clean directories
          */
         clean: ['<%= pkg.releaseDir %>',
-                '<%= pkg.docsDir %>', 
-                '<%= pkg.coverage %>',
-                '<%= pkg.reportsDir %>'],
-        /**
-         * check style quality
-         */
-        csslint: {
-            strict: {
-                options: {
-                    import: 2
-                },
-                src: ['<%= pkg.cssDir %>**/*.css']
-            }
-        },
+            '<%= pkg.docsDir %>',
+            '<%= pkg.coverage %>',
+            '<%= pkg.reportsDir %>'],
         /**
          * check code quality
          */
-        jshint: {
-            allFiles: ['grunt.js', 
-                       '<%= pkg.srcDir %>**/*.js',
-                       '<%= pkg.specDir %>**/*.js'],
+        eslint: {
+            src: ['Gruntfile.js',
+                '<%= pkg.srcDir %>**/*.js',
+                '<%= pkg.specDir %>**/*.js'],
             options: {
-                jshintrc: '.jshintrc',
-                reporter: 'checkstyle',
-                reporterOutput: '<%= pkg.coverage %>checkstyle-result.xml'
+                fix: true
             }
-        },
-        /**
-         * run code style linter
-         */
-        jscs: {
-            src: "<%= pkg.srcDir %>**/*.js"
         },
         /**
          * run jasmine tests
@@ -70,21 +51,8 @@ module.exports = function(grunt) {
                     },
                     junit : {
                         path: '<%= pkg.reportsDir %>'
-                    },
+                    }
                 }
-            }
-        },
-        /**
-         * minifying files
-         */
-        uglify: {
-            options: {
-                mangle: {toplevel: false}, //prevent changes to variable and function names
-                squeeze: {dead_code: false},
-                codegen: {quote_keys: true}
-            },
-            project: {
-                files: '<%= pkg.files %>'
             }
         },
         /**
@@ -104,34 +72,6 @@ module.exports = function(grunt) {
             }
         },
         /**
-         * create api documentation
-         */
-        yuidoc: {
-            compile: {
-                name: '<%= pkg.name %>',
-                description: '<%= pkg.description %>',
-                version: '<%= pkg.version %>',
-                url: '<%= pkg.homepage %>',
-                options: { 
-                    paths: '<%= pkg.srcDir %>',
-                    outdir: '<%= pkg.docsDir %>'
-                }
-            }
-        },
-        /**
-         * create a archive
-         */
-        compress: {
-            main: {
-                options: {
-                    archive: '<%= pkg.releaseDir %>grunt_sample_<%= pkg.version %>.tgz'
-                },
-                files: [
-                    {src: ['**/*.js'], cwd: '<%= pkg.releaseDir %>', expand: true}
-                ]
-            }
-        },
-        /**
          * git hook
          */
         githooks: {
@@ -142,16 +82,13 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-csslint');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-jscs-checker');
+    grunt.loadNpmTasks('grunt-eslint');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-release');
-    grunt.loadNpmTasks('grunt-contrib-yuidoc');
-    grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-githooks');
 
-    grunt.registerTask('test', ['csslint', 'jshint', 'jscs']);
-    grunt.registerTask('default', ['clean', 'csslint', 'jshint', 'jscs', 'jasmine', 'uglify', 'release', 'yuidoc', 'compress']);
+    grunt.loadTasks('tasks');
+
+    grunt.registerTask('test', ['nsp']);
+    grunt.registerTask('default', ['clean', 'nsp', 'jasmine', 'jsdoc']);
 };

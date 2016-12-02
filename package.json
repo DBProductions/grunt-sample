@@ -1,6 +1,6 @@
 {
   "name": "grunt-sample",
-  "version": "0.1.59",
+  "version": "0.1.76",
   "description": "Grunt sample",
   "repository": "git@github.com:DBProductions/grunt-sample.git",
   "srcDir": "js/",
@@ -25,17 +25,23 @@
     "test": "grunt --verbose"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "grunt": "~1.0.1",
+    "grunt-complexity": "^1.0.1",
     "grunt-contrib-clean": "~1.0.0",
-    "grunt-contrib-compress": "~1.1.1",
-    "grunt-contrib-csslint": "^1.0.0",
+    "grunt-contrib-csslint": "^2.0.0",
     "grunt-contrib-jasmine": "~1.0.0",
-    "grunt-contrib-jshint": "~1.0.0",
-    "grunt-contrib-uglify": "~1.0.0",
-    "grunt-contrib-yuidoc": "~1.0.0",
-    "grunt-githooks": "^0.5.0",
+    "grunt-eslint": "^19.0.0",
+    "grunt-githooks": "^0.6.0",
     "grunt-jscs-checker": "^0.8.1",
-    "grunt-release": "~0.13.0",
-    "grunt-template-jasmine-istanbul": "~0.4.0"
+    "grunt-jsdoc": "^2.1.0",
+    "grunt-nsp": "^2.3.1",
+    "grunt-release": "^0.14.0",
+    "grunt-template-jasmine-istanbul": "^0.5.0"
+  },
+  "dependencies": {
+    "esprima": "^3.1.2"
   }
 }
